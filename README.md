@@ -18,7 +18,9 @@ Centraliser agenda, préparations de rendez-vous, et suivi de mails clients sans
 - 📊 **Préparation contextuelle** - Résumé intelligent avant chaque meeting
 - 👥 **Collaboration** - Partage d'agenda avec tes collaborateurs
 
-## 🚀 Installation
+## 🚀 Démarrage rapide
+
+### Développement local
 
 \`\`\`bash
 # Installer les dépendances
@@ -34,13 +36,32 @@ npm run dev
 
 Ouvre [http://localhost:3000](http://localhost:3000) dans ton navigateur.
 
+### Avec Docker
+
+\`\`\`bash
+# Builder et lancer avec Docker Compose
+docker-compose up --build
+\`\`\`
+
+### Déploiement sur Dokploy
+
+Voir le guide complet dans [SETUP.md](./SETUP.md)
+
+\`\`\`bash
+# Sur ton serveur Dokploy
+1. Connecte ton repo GitHub
+2. Configure les variables d'environnement
+3. Déploie en un clic !
+\`\`\`
+
 ## 🛠️ Stack technique
 
 - **Frontend**: Next.js 15 + TypeScript + Tailwind CSS
 - **Backend**: Supabase (auth, database, functions)
 - **IA**: OpenAI GPT-4o-mini / GPT-4-turbo
 - **Intégrations**: Gmail API, Google Calendar API
-- **Hébergement**: Vercel
+- **Déploiement**: Docker + Dokploy
+- **Containerisation**: Dockerfile multi-stage optimisé
 
 ## 📁 Structure du projet
 

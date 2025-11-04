@@ -1,0 +1,26 @@
+{
+  "name": "mindflow",
+  "type": "application",
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "startCommand": "npm start",
+  "dockerfile": "Dockerfile",
+  "port": 3000,
+  "healthCheck": {
+    "path": "/api/health",
+    "interval": 30,
+    "timeout": 3,
+    "retries": 3
+  },
+  "env": {
+    "NODE_ENV": "production",
+    "NEXT_TELEMETRY_DISABLED": "1"
+  },
+  "resources": {
+    "memory": "512Mi",
+    "cpu": "500m"
+  },
+  "replicas": 1,
+  "autoDeploy": true,
+  "domains": []
+}
